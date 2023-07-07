@@ -11,6 +11,8 @@ import {
   TextDate,
 } from "../components"
 import {BREAKPOINT} from "../utils/constants"
+import {FaInstagram, FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'; 
+
 
 const Hero = styled.div`
   margin-bottom: 20vh;
@@ -51,10 +53,23 @@ export default function Home({data}) {
       <HeaderLogo />
       <Layout>
         <Hero>
-          <HeadingXL>Lewis Gatsby Starter Blog</HeadingXL>
+          <HeadingXL>Sunil Aleti</HeadingXL>
           <TextHome>
-            This is a custom Gatsby starter template to start a new blog or
-            personal website.
+          <div style={{display: "flex", justifyContent: "center", marginTop: "20px"}}>
+              <a href="https://www.instagram.com/sunil_aleti" target="_blank" rel="noopener noreferrer" style={{marginRight: "10px"}}>
+                <FaInstagram size={24} />
+              </a>
+              <a href="https://twitter.com/aleti_sunil" target="_blank" rel="noopener noreferrer" style={{marginRight: "10px"}}>
+                <FaTwitter size={24} />
+              </a>
+              <a href="https://github.com/aletisunil" target="_blank" rel="noopener noreferrer" style={{marginRight: "10px"}}>
+                <FaGithub size={24} />
+              </a>
+              <a href="https://linkedin.com/in/sunilaleti" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              
+            </div>
           </TextHome>
         </Hero>
         {data.allMarkdownRemark.edges.map(({node}) => (
